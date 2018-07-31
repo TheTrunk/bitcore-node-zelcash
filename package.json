@@ -52,27 +52,27 @@
     "zelcashd"
   ],
   "dependencies": {
-    "async": "^1.3.0",
+    "async": "^2.5.0",
     "bitcoind-rpc": "^0.6.0",
     "bitcore-lib-zelcash": "git://github.com/TheTrunk/bitcore-lib-zelcash#master",
-    "body-parser": "^1.13.3",
+    "body-parser": "^1.18.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
     "errno": "^0.1.4",
-    "express": "^4.13.3",
+    "express": "^4.16.3",
     "liftoff": "^2.2.0",
     "lru-cache": "^4.0.1",
-    "mkdirp": "0.5.0",
+    "mkdirp": "0.5.1",
     "npm": "^2.14.1",
     "path-is-absolute": "^1.0.0",
     "semver": "^5.0.1",
-    "socket.io": "^1.4.5",
-    "socket.io-client": "^1.4.5",
-    "zmq": "^2.14.0"
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
+    "zeromq": "^4.6.0"
   },
   "optionalDependencies": {
     "bufferutil": "~1.2.1",
-    "utf-8-validate": "~1.2.1"
+    "utf-8-validate": "~4.0.1"
   },
   "devDependencies": {
     "benchmark": "1.0.0",
@@ -82,10 +82,10 @@
     "istanbul": "^0.4.3",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.1.0",
-    "mocha": "^2.4.5",
+    "mocha": "^5.0.5",
     "proxyquire": "^1.3.1",
     "rimraf": "^2.4.2",
-    "sinon": "^1.15.4"
+    "sinon": "^4.4.8"
   },
   "license": "MIT"
 }
