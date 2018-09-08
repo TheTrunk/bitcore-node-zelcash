@@ -6,11 +6,11 @@ A ZelCash full node for building applications and services with Node.js. A node 
 ## Explorer Guide
 ### Part 1. Zelcash with extended RPC functionalities
 ```bash
-wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/installZelcashd.sh | bash
+wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/master/installZelcashd.sh | bash
 ```
 ### Part 2. Latest Zelcash insight explorer = bitcore-node-zelcash with insight-api and insight-ui
 ```bash
-wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/installExplorer.sh | bash
+wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/master/installExplorer.sh | bash
 ```
 ## Install
 
