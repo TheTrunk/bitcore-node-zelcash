@@ -10,7 +10,7 @@ sudo apt-get install \
 # zelcashBitcore
 cd
 git clone -b Bitcore https://github.com/zelcash/zelcash.git zelcashBitcore
-cd zelcash
+cd zelcashBitcore
 ./zcutil/fetch-params.sh
 ./zcutil/build.sh -j$(nproc)
 cd

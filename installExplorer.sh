@@ -8,6 +8,14 @@ sudo apt-get install -y nodejs
 sudo apt-get install -y build-essential
 sudo apt-get install -y libzmq3-dev
 
+# MongoDB
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.1 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.1.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+sudo systemctl enable mongod
+sudo service mongod start
+
 #bitcore-node-zelcash
 cd
 git clone https://github.com/TheTrunk/bitcore-node-zelcash
@@ -108,6 +116,4 @@ cd ..
 cd ..
 
 echo "Explorer is installed"
-echo "Please install and start mongodb following the guide on"
-echo "https://docs.mongodb.com/manual/administration/install-on-linux/"
 echo "Then to start explorer navigate to mynode folder and type ../bitcore-node start. Explorer will be accessible on localhost:3001" 
