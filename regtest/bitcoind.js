@@ -26,7 +26,7 @@ var coinbasePrivateKey;
 var privateKey = bitcore.PrivateKey();
 var destKey = bitcore.PrivateKey();
 
-describe('Zelcashd Functionality', function() {
+describe('Zcashd Functionality', function() {
 
   before(function(done) {
     this.timeout(60000);
@@ -46,7 +46,7 @@ describe('Zelcashd Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, '../bin/zelcashd')
+          exec: path.resolve(__dirname, '../bin/zcashd')
         },
         node: {
           network: regtestNetwork,
@@ -60,10 +60,10 @@ describe('Zelcashd Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for ZelCash to initialize...');
+      log.info('Waiting for Zcash to initialize...');
 
       bitcoind.start(function() {
-        log.info('Zelcashd started');
+        log.info('Zcashd started');
 
         client = new BitcoinRPC({
           protocol: 'http',

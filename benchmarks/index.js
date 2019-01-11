@@ -5,7 +5,7 @@ var bitcoin = require('bitcoin');
 var async = require('async');
 var maxTime = 20;
 
-console.log('ZelCash Service native interface vs. ZelCash JSON RPC interface');
+console.log('Zcash Service native interface vs. Zcash JSON RPC interface');
 console.log('----------------------------------------------------------------------');
 
 // To run the benchmarks a fully synced Bitcore Core directory is needed. The RPC comands
@@ -28,7 +28,7 @@ var fixtureData = {
 
 var bitcoind = require('../').services.Bitcoin({
   node: {
-    datadir: process.env.HOME + '/.zelcash',
+    datadir: process.env.HOME + '/.zcash',
     network: {
       name: 'testnet'
     }
@@ -43,16 +43,16 @@ bitcoind.start(function(err) {
   if (err) {
     throw err;
   }
-  console.log('ZelCash started');
+  console.log('Zcash started');
 });
 
 bitcoind.on('ready', function() {
 
-  console.log('ZelCash ready');
+  console.log('Zcash ready');
 
   var client = new bitcoin.Client({
     host: 'localhost',
-    port: 26125,
+    port: 18233,
     user: 'bitcoin',
     pass: 'local321'
   });
