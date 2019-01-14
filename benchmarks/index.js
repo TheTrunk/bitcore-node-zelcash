@@ -5,7 +5,7 @@ var bitcoin = require('bitcoin');
 var async = require('async');
 var maxTime = 20;
 
-console.log('Zcash Service native interface vs. Zcash JSON RPC interface');
+console.log('Hush Service native interface vs. Hush JSON RPC interface');
 console.log('----------------------------------------------------------------------');
 
 // To run the benchmarks a fully synced Bitcore Core directory is needed. The RPC comands
@@ -28,7 +28,7 @@ var fixtureData = {
 
 var bitcoind = require('../').services.Bitcoin({
   node: {
-    datadir: process.env.HOME + '/.zcash',
+    datadir: process.env.HOME + '/.hush',
     network: {
       name: 'testnet'
     }
@@ -43,12 +43,12 @@ bitcoind.start(function(err) {
   if (err) {
     throw err;
   }
-  console.log('Zcash started');
+  console.log('Hush started');
 });
 
 bitcoind.on('ready', function() {
 
-  console.log('Zcash ready');
+  console.log('Hush ready');
 
   var client = new bitcoin.Client({
     host: 'localhost',

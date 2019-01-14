@@ -16,14 +16,14 @@ sudo apt-get install -y mongodb-org
 sudo systemctl enable mongod
 sudo service mongod start
 
-#bitcore-node-zelcash
+#bitcore-node-hush
 cd
-git clone https://github.com/TheTrunk/bitcore-node-zelcash
-cd bitcore-node-zelcash
+git clone -b hush https://github.com/TheTrunk/bitcore-node-hush
+cd bitcore-node-hush
 npm install
 cd bin
 chmod +x bitcore-node
-cp ~/zelcashBitcore/src/zelcashd ~/bitcore-node-zelcash/bin
+cp ~/hushBitcore/src/hushd ~/bitcore-node-hush/bin
 ./bitcore-node create mynode
 cd mynode
 
@@ -49,7 +49,7 @@ cat << EOF > bitcore-node.json
       "sendTxLog": "./data/pushtx.log",
       "spawn": {
         "datadir": "./data",
-        "exec": "../zelcashd",
+        "exec": "../hushd",
         "rpcqueue": 1000,
         "rpcport": 16124,
         "zmqpubrawtx": "tcp://127.0.0.1:28332",
@@ -61,7 +61,7 @@ cat << EOF > bitcore-node.json
                  "db": {
                    "host": "127.0.0.1",
                    "port": "27017",
-                   "database": "zelcash-api-livenet",
+                   "database": "hush-api-livenet",
                    "user": "",
                    "password": ""
           },
@@ -76,7 +76,7 @@ cat << EOF > bitcore-node.json
 EOF
 
 cd data
-cat << EOF > zelcash.conf
+cat << EOF > hush.conf
 server=1
 whitelist=127.0.0.1
 txindex=1
@@ -87,8 +87,8 @@ zmqpubrawtx=tcp://127.0.0.1:28332
 zmqpubhashblock=tcp://127.0.0.1:28332
 rpcport=16124
 rpcallowip=127.0.0.1
-rpcuser=zelcash
-rpcpassword=myzelcashpassword
+rpcuser=hush
+rpcpassword=myhushstrongpassword
 uacomment=bitcore
 mempoolexpiry=24
 rpcworkqueue=1100
@@ -97,16 +97,13 @@ dbcache=1000
 maxtxfee=1.0
 dbmaxfilesize=64
 showmetrics=0
-addnode=explorer.zel.cash
-addnode=explorer2.zel.cash
-addnode=explorer.zelcash.online
-addnode=explorer.zel.zeltrez.io
+addnode=explorer.hush.zelcore.io
 EOF
 
 cd ..
 cd node_modules
-git clone https://github.com/TheTrunk/insight-api
-git clone https://github.com/TheTrunk/insight-ui
+git clone -b hush https://github.com/TheTrunk/insight-api
+git clone -b hushhttps://github.com/TheTrunk/insight-ui
 cd insight-api
 npm install
 cd ..

@@ -1,29 +1,29 @@
-Bitcore Node ZelCash
+Bitcore Node Hush
 ============
 
-A ZelCash full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
+A Hush full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
 
 ## Explorer Guide
-### Part 1. Zelcash with extended RPC functionalities
+### Part 1. Hush with extended RPC functionalities
 ```bash
-wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/master/installZelcashd.sh | bash
+wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/master/installDaemon.sh | bash
 ```
-### Part 2. Latest Zelcash insight explorer = bitcore-node-zelcash with insight-api and insight-ui
+### Part 2. Latest Hush insight explorer = bitcore-node-hush with insight-api and insight-ui
 ```bash
 wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/master/installExplorer.sh | bash
 ```
 ## Install
 
 ```bash
-git clone https://github.com/TheTrunk/bitcore-node-zelcash.git
-cd bitcore-node-zelcash
+git clone -b hush https://github.com/TheTrunk/bitcore-node-zelcash.git
+cd bitcore-node-hush
 npm install
 bitcore-node start
 ```
 
 ## Prerequisites
 
-- GNU/Linux x86_32/x86_64, or OSX 64bit *(for zelcashd distributed binaries)*
+- GNU/Linux x86_32/x86_64, or OSX 64bit *(for hushd distributed binaries)*
 - Node.js v0.10, v0.12 or v4
 - ZeroMQ *(libzmq3-dev for Ubuntu/Debian or zeromq on OSX)*
 - ~30GB of disk storage

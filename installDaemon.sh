@@ -7,12 +7,12 @@ sudo apt-get install \
       autoconf libtool ncurses-dev unzip git python \
       zlib1g-dev wget bsdmainutils automake curl
 
-# zelcashBitcore
+# hushBitcore
 cd
-git clone -b Bitcore https://github.com/zelcash/zelcash.git zelcashBitcore
-cd zelcashBitcore
+git clone -b Bitcore https://github.com/myhush/hush.git hushBitcore
+cd hushBitcore
 ./zcutil/fetch-params.sh
 ./zcutil/build.sh -j$(nproc)
 cd
-echo "Zelcashd with extended RPC functionalities is prepared. Please run following command to install insight explorer for zelcash"
+echo "Hushd with extended RPC functionalities is prepared. Please run following command to install insight explorer for hush"
 echo "wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/master/installExplorer.sh | bash"

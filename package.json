@@ -56,8 +56,8 @@
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "tags": [
-    "zelcash",
-    "zelcashd"
+    "hush",
+    "hushd"
   ],
   "dependencies": {
     "async": "^2.5.0",
