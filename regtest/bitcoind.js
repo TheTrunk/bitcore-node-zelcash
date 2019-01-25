@@ -26,7 +26,7 @@ var coinbasePrivateKey;
 var privateKey = bitcore.PrivateKey();
 var destKey = bitcore.PrivateKey();
 
-describe('Hushd Functionality', function() {
+describe('Commerciumd Functionality', function() {
 
   before(function(done) {
     this.timeout(60000);
@@ -46,7 +46,7 @@ describe('Hushd Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, '../bin/hushd')
+          exec: path.resolve(__dirname, '../bin/commerciumd')
         },
         node: {
           network: regtestNetwork,
@@ -60,10 +60,10 @@ describe('Hushd Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for Hush to initialize...');
+      log.info('Waiting for Commercium to initialize...');
 
       bitcoind.start(function() {
-        log.info('Hushd started');
+        log.info('Commerciumd started');
 
         client = new BitcoinRPC({
           protocol: 'http',

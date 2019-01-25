@@ -16,14 +16,14 @@ sudo apt-get install -y mongodb-org
 sudo systemctl enable mongod
 sudo service mongod start
 
-#bitcore-node-hush
+#bitcore-node-commercium
 cd
-git clone -b hush https://github.com/TheTrunk/bitcore-node-hush
-cd bitcore-node-hush
+git clone -b commercium https://github.com/TheTrunk/bitcore-node-zelcash bitcore-node-commercium
+cd bitcore-node-commercium
 npm install
 cd bin
 chmod +x bitcore-node
-cp ~/hushBitcore/src/hushd ~/bitcore-node-hush/bin
+cp ~/commerciumBitcore/src/commerciumd ~/bitcore-node-commercium/bin
 ./bitcore-node create mynode
 cd mynode
 
@@ -49,9 +49,9 @@ cat << EOF > bitcore-node.json
       "sendTxLog": "./data/pushtx.log",
       "spawn": {
         "datadir": "./data",
-        "exec": "../hushd",
+        "exec": "../commerciumd",
         "rpcqueue": 1000,
-        "rpcport": 16124,
+        "rpcport": 12020,
         "zmqpubrawtx": "tcp://127.0.0.1:28332",
         "zmqpubhashblock": "tcp://127.0.0.1:28332"
       }
@@ -61,7 +61,7 @@ cat << EOF > bitcore-node.json
                  "db": {
                    "host": "127.0.0.1",
                    "port": "27017",
-                   "database": "hush-api-livenet",
+                   "database": "commercium-api-livenet",
                    "user": "",
                    "password": ""
           },
@@ -76,7 +76,7 @@ cat << EOF > bitcore-node.json
 EOF
 
 cd data
-cat << EOF > hush.conf
+cat << EOF > commercium.conf
 server=1
 whitelist=127.0.0.1
 txindex=1
@@ -85,10 +85,10 @@ timestampindex=1
 spentindex=1
 zmqpubrawtx=tcp://127.0.0.1:28332
 zmqpubhashblock=tcp://127.0.0.1:28332
-rpcport=16124
+rpcport=12020
 rpcallowip=127.0.0.1
-rpcuser=hush
-rpcpassword=myhushstrongpassword
+rpcuser=commercium
+rpcpassword=mycommerciumstrongpassword
 uacomment=bitcore
 mempoolexpiry=24
 rpcworkqueue=1100
@@ -97,13 +97,13 @@ dbcache=1000
 maxtxfee=1.0
 dbmaxfilesize=64
 showmetrics=0
-addnode=explorer.hush.zelcore.io
+addnode=explorer.cmm.zelcore.io
 EOF
 
 cd ..
 cd node_modules
-git clone -b hush https://github.com/TheTrunk/insight-api
-git clone -b hushhttps://github.com/TheTrunk/insight-ui
+git clone -b commercium https://github.com/TheTrunk/insight-api
+git clone -b commerciumhttps://github.com/TheTrunk/insight-ui
 cd insight-api
 npm install
 cd ..

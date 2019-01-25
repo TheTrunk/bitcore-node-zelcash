@@ -5,7 +5,7 @@ var bitcoin = require('bitcoin');
 var async = require('async');
 var maxTime = 20;
 
-console.log('Hush Service native interface vs. Hush JSON RPC interface');
+console.log('Commercium Service native interface vs. Commercium JSON RPC interface');
 console.log('----------------------------------------------------------------------');
 
 // To run the benchmarks a fully synced Bitcore Core directory is needed. The RPC comands
@@ -28,7 +28,7 @@ var fixtureData = {
 
 var bitcoind = require('../').services.Bitcoin({
   node: {
-    datadir: process.env.HOME + '/.hush',
+    datadir: process.env.HOME + '/.commercium',
     network: {
       name: 'testnet'
     }
@@ -43,12 +43,12 @@ bitcoind.start(function(err) {
   if (err) {
     throw err;
   }
-  console.log('Hush started');
+  console.log('Commercium started');
 });
 
 bitcoind.on('ready', function() {
 
-  console.log('Hush ready');
+  console.log('Commercium ready');
 
   var client = new bitcoin.Client({
     host: 'localhost',

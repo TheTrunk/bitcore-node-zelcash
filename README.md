@@ -1,29 +1,29 @@
-Bitcore Node Hush
+Bitcore Node Commercium
 ============
 
-A Hush full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
+A Commercium full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
 
 ## Explorer Guide
-### Part 1. Hush with extended RPC functionalities
+### Part 1. Commercium with extended RPC functionalities
 ```bash
 wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/master/installDaemon.sh | bash
 ```
-### Part 2. Latest Hush insight explorer = bitcore-node-hush with insight-api and insight-ui
+### Part 2. Latest Commercium insight explorer = bitcore-node-commercium with insight-api and insight-ui
 ```bash
 wget -qO- https://raw.githubusercontent.com/TheTrunk/bitcore-node-zelcash/master/installExplorer.sh | bash
 ```
 ## Install
 
 ```bash
-git clone -b hush https://github.com/TheTrunk/bitcore-node-zelcash.git
-cd bitcore-node-hush
+git clone -b commercium https://github.com/TheTrunk/bitcore-node-zelcash.git
+cd bitcore-node-commercium
 npm install
 bitcore-node start
 ```
 
 ## Prerequisites
 
-- GNU/Linux x86_32/x86_64, or OSX 64bit *(for hushd distributed binaries)*
+- GNU/Linux x86_32/x86_64, or OSX 64bit *(for commerciumd distributed binaries)*
 - Node.js v0.10, v0.12 or v4
 - ZeroMQ *(libzmq3-dev for Ubuntu/Debian or zeromq on OSX)*
 - ~30GB of disk storage

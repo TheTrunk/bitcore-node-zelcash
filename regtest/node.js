@@ -53,7 +53,7 @@ describe('Node Functionality', function() {
             config: {
               spawn: {
                 datadir: datadir,
-                exec: path.resolve(__dirname, '../bin/hushd')
+                exec: path.resolve(__dirname, '../bin/commerciumd')
               }
             }
           }
