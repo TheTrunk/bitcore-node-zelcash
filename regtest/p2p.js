@@ -52,7 +52,7 @@ describe('P2P Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, '../bin/zcashd')
+          exec: path.resolve(__dirname, '../bin/zclassicd')
         },
         node: {
           network: bitcore.Networks.testnet
@@ -63,13 +63,13 @@ describe('P2P Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for Zcash to initialize...');
+      log.info('Waiting for Zclassic to initialize...');
 
       bitcoind.start(function(err) {
         if (err) {
           throw err;
         }
-        log.info('Zcashd started');
+        log.info('Zclassicd started');
 
         client = new BitcoinRPC({
           protocol: 'http',
