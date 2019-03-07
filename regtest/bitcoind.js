@@ -26,7 +26,7 @@ var coinbasePrivateKey;
 var privateKey = bitcore.PrivateKey();
 var destKey = bitcore.PrivateKey();
 
-describe('Zclassicd Functionality', function() {
+describe('Safecoind Functionality', function() {
 
   before(function(done) {
     this.timeout(60000);
@@ -46,7 +46,7 @@ describe('Zclassicd Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, '../bin/zclassicd')
+          exec: path.resolve(__dirname, '../bin/safecoind')
         },
         node: {
           network: regtestNetwork,
@@ -60,10 +60,10 @@ describe('Zclassicd Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for Zclassic to initialize...');
+      log.info('Waiting for Safecoin to initialize...');
 
       bitcoind.start(function() {
-        log.info('Zclassicd started');
+        log.info('Safecoind started');
 
         client = new BitcoinRPC({
           protocol: 'http',
