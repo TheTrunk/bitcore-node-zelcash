@@ -5,7 +5,7 @@ var bitcoin = require('bitcoin');
 var async = require('async');
 var maxTime = 20;
 
-console.log('Zclassic Service native interface vs. Zclassic JSON RPC interface');
+console.log('BitcoinZ Service native interface vs. BitcoinZ JSON RPC interface');
 console.log('----------------------------------------------------------------------');
 
 // To run the benchmarks a fully synced Bitcore Core directory is needed. The RPC comands
@@ -28,7 +28,7 @@ var fixtureData = {
 
 var bitcoind = require('../').services.Bitcoin({
   node: {
-    datadir: process.env.HOME + '/.zclassic',
+    datadir: process.env.HOME + '/.bitcoinz',
     network: {
       name: 'testnet'
     }
@@ -43,12 +43,12 @@ bitcoind.start(function(err) {
   if (err) {
     throw err;
   }
-  console.log('Zclassic started');
+  console.log('BitcoinZ started');
 });
 
 bitcoind.on('ready', function() {
 
-  console.log('Zclassic ready');
+  console.log('BitcoinZ ready');
 
   var client = new bitcoin.Client({
     host: 'localhost',
