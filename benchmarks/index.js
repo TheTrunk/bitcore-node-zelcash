@@ -5,7 +5,7 @@ var bitcoin = require('bitcoin');
 var async = require('async');
 var maxTime = 20;
 
-console.log('Safecoin Service native interface vs. Safecoin JSON RPC interface');
+console.log('Anon Service native interface vs. Anon JSON RPC interface');
 console.log('----------------------------------------------------------------------');
 
 // To run the benchmarks a fully synced Bitcore Core directory is needed. The RPC comands
@@ -28,7 +28,7 @@ var fixtureData = {
 
 var bitcoind = require('../').services.Bitcoin({
   node: {
-    datadir: process.env.HOME + '/.safecoin',
+    datadir: process.env.HOME + '/.anon',
     network: {
       name: 'testnet'
     }
@@ -43,12 +43,12 @@ bitcoind.start(function(err) {
   if (err) {
     throw err;
   }
-  console.log('Safecoin started');
+  console.log('Anon started');
 });
 
 bitcoind.on('ready', function() {
 
-  console.log('Safecoin ready');
+  console.log('Anon ready');
 
   var client = new bitcoin.Client({
     host: 'localhost',

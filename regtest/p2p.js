@@ -52,7 +52,7 @@ describe('P2P Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, '../bin/safecoind')
+          exec: path.resolve(__dirname, '../bin/anond')
         },
         node: {
           network: bitcore.Networks.testnet
@@ -63,13 +63,13 @@ describe('P2P Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for Safecoin to initialize...');
+      log.info('Waiting for Anon to initialize...');
 
       bitcoind.start(function(err) {
         if (err) {
           throw err;
         }
-        log.info('Safecoind started');
+        log.info('Anond started');
 
         client = new BitcoinRPC({
           protocol: 'http',
