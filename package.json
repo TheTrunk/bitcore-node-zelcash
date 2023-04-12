@@ -61,8 +61,8 @@
   ],
   "dependencies": {
     "async": "^2.5.0",
-    "bitcoind-rpc": "git://github.com/TheTrunk/bitcoind-rpc#master",
-    "bitcore-lib-zelcash": "git://github.com/TheTrunk/bitcore-lib-zelcash#master",
+    "bitcoind-rpc": "https://github.com/TheTrunk/bitcoind-rpc#master",
+    "bitcore-lib-zelcash": "https://github.com/TheTrunk/bitcore-lib-zelcash#master",
     "body-parser": "^1.18.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
